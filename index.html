@@ -34,40 +34,97 @@
   Login
   Register -->
 
-    <header>
+    <header class="header">
       <img src="./images/logo.svg" alt="Snap logo" class="header__logo" />
-      <a href="javascript:void(0)" class="header__menu"
-        ><img src="./images/icon-menu.svg" alt="navigation menu"
-      /></a>
-      <nav></nav>
+      <div>
+        <a href="javascript:void(0)" class="open-menu"
+          ><img src="./images/icon-menu.svg" alt="navigation menu"
+        /></a>
+        <nav class="side-navbar">
+          <a href="javascript:void(0)" class="close-menu"
+            ><img src="./images/icon-close-menu.svg" alt="navigation menu"
+          /></a>
+          <ul class="side-navbar__list" role="list">
+            <li class="dropdown" data-state="collapsed">
+              <a href="#features" class="side-navbar__item"
+                >Features<svg
+                  width="10"
+                  height="6"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke="#686868"
+                    stroke-width="1.5"
+                    fill="none"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="dropdown" data-state="collapsed">
+              <a href="#company" class="side-navbar__item"
+                >Company<svg
+                  width="10"
+                  height="6"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke="#686868"
+                    stroke-width="1.5"
+                    fill="none"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="side-navbar__item">Careers</a>
+            </li>
+            <li>
+              <a href="#" class="side-navbar__item">About</a>
+            </li>
+          </ul>
+          <div class="side-navbar__cta">
+            <a href="#" class="side-navbar__login">Login</a>
+            <a href="#" class="side-navbar__btn btn btn--outline">Register</a>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="hero">
       <img
         src="./images/image-hero-mobile.png"
         alt="Snap user syncing works with his team."
-        class="hero__img"
+        class="hero__img--mobile"
       />
       <img
-        style="display: none"
         src="./images/image-hero-desktop.png"
         alt="Snap user syncing works with his team."
-        class="hero__img"
+        class="hero__img--desktop"
       />
-      <h1 class="hero__heading">Make remote work</h1>
-      <p class="hero__body">
-        Get your team in sync, no matter your location. Streamline processes,
-        create team rituals, and watch productivity soar.
-      </p>
+      <div class="hero__copy">
+        <h1 class="hero__heading">Make remote work</h1>
+        <p class="hero__body">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
 
-      <a href="#" class="hero__btn" role="button">Learn more</a>
+        <a href="#" class="hero__btn btn btn--fill" role="button">Learn more</a>
+        <div class="hero__client">
+          <img src="./images/client-databiz.svg" alt="databiz" />
+          <img src="./images/client-audiophile.svg" alt="audiophile" />
+          <img src="./images/client-meet.svg" alt="meet" />
+          <img src="./images/client-maker.svg" alt="maker" />
+        </div>
+      </div>
     </main>
 
-    <footer class="attribution">
+    <!-- <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="https://github.com/whatTheFath">whatthefath</a>.
-    </footer>
+    </footer> -->
   </body>
 </html>
