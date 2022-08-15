@@ -30,6 +30,8 @@ li {
   padding: 0;
 }
 
+// Mobile layout
+
 // Header section
 
 .header {
@@ -257,5 +259,53 @@ li {
 
   to {
     transform: none;
+  }
+}
+
+// Desktop Layout
+
+@media screen and (min-width: 36rem) {
+  // TODO: Tidy up the layout
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    align-items: center;
+    max-width: 74rem;
+    margin-inline: auto;
+
+    &__copy {
+      grid-column: 1;
+      grid-row: 1;
+      text-align: start;
+      align-items: flex-start;
+      padding-left: 2em;
+    }
+
+    &__heading {
+      font-size: 4.35em;
+    }
+
+    &__body {
+      max-width: 45ch;
+    }
+
+    &__img {
+      grid-column: 2;
+      padding-left: 5em;
+    }
+
+    &__img--mobile {
+      display: none;
+    }
+    &__img--desktop {
+      display: block;
+    }
+  }
+
+  .open-menu,
+  .side-navbar,
+  .overlay {
+    display: none;
   }
 }
