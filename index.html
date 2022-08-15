@@ -17,8 +17,16 @@
 
     <style>
       .attribution {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
         font-size: 11px;
         text-align: center;
+        margin-bottom: 1em;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -26,20 +34,16 @@
     </style>
   </head>
   <body>
-    <!-- Features
-  Company
-  Careers
-  About
-
-  Login
-  Register -->
-
+    <!-- Header section -->
     <header class="header">
       <img src="./images/logo.svg" alt="Snap logo" class="header__logo" />
       <div>
+        <!-- Mobile open menu icon -->
         <a href="javascript:void(0)" class="open-menu"
           ><img src="./images/icon-menu.svg" alt="navigation menu"
         /></a>
+
+        <!-- Mobile side navigation bar -->
         <nav class="side-navbar" data-state="close">
           <a href="javascript:void(0)" class="close-menu"
             ><img src="./images/icon-close-menu.svg" alt="navigation menu"
@@ -60,7 +64,8 @@
                   />
                 </svg>
               </a>
-              <!-- dropdown -->
+
+              <!-- Dropdown -->
               <div class="dropdown__menu">
                 <ul
                   class="side-navbar__list side-navbar__list--dropdown"
@@ -106,7 +111,7 @@
                   />
                 </svg>
               </a>
-              <!-- dropdown -->
+              <!-- Dropdown -->
               <div class="dropdown__menu">
                 <ul
                   class="side-navbar__list side-navbar__list--dropdown"
@@ -137,9 +142,12 @@
           </div>
         </nav>
       </div>
+
+      <!-- Background overlay when side navbar opened -->
       <div class="overlay" data-state="close"></div>
     </header>
 
+    <!-- Hero section -->
     <main class="hero">
       <img
         src="./images/image-hero-mobile.png"
@@ -151,13 +159,14 @@
         alt="Snap user syncing works with his team."
         class="hero__img--desktop"
       />
+
+      <!-- Hero section copy -->
       <div class="hero__copy">
         <h1 class="hero__heading">Make remote work</h1>
         <p class="hero__body">
           Get your team in sync, no matter your location. Streamline processes,
           create team rituals, and watch productivity soar.
         </p>
-
         <a href="#" class="hero__btn btn btn--fill" role="button">Learn more</a>
         <div class="hero__client">
           <img src="./images/client-databiz.svg" alt="databiz" />
@@ -168,12 +177,15 @@
       </div>
     </main>
 
-    <!-- <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="https://github.com/whatTheFath">whatthefath</a>.
-    </footer> -->
+    <!-- Footer section -->
+    <footer class="attribution">
+      <div>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/whatTheFath">whatthefath</a>.
+      </div>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>

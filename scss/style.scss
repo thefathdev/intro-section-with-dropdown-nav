@@ -224,16 +224,38 @@ li {
     padding: 1.5em 0 0.5em 0;
     display: none;
   }
-}
 
-// TODO: add transition
+  &__btn > svg {
+    transition: transform 200ms ease-in-out;
+  }
+}
 
 .dropdown[data-state='expanded'] {
   .dropdown__btn svg {
-    transform: rotateX(180);
+    transform: rotate(-180deg);
   }
 
   .dropdown__menu {
     display: block;
+    animation: slide-down 300ms ease-in-out both;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  to {
+    transform: none;
   }
 }
