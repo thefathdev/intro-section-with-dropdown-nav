@@ -122,9 +122,12 @@ li {
   background-color: var(--clr-neutral-100);
   height: 100vh;
   width: 65%;
+  transform: none;
+  transition: transform 300ms ease-in-out;
+  z-index: 2;
 
   &[data-state='close'] {
-    display: none;
+    transform: translateX(100%);
   }
 
   &__list {
@@ -177,4 +180,24 @@ li {
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+}
+
+// Overlay in mobile
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--clr-neutral-700);
+  opacity: 0.5;
+  transform: none;
+  z-index: 1;
+  transition: opacity 350ms ease-in-out;
+
+  &[data-state='close'] {
+    opacity: 0;
+    transform: translateX(120%);
+    transition: transform 10ms 350ms ease-in-out, opacity 350ms ease-in-out;
+  }
 }
