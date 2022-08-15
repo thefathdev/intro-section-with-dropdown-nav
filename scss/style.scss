@@ -136,6 +136,10 @@ li {
     flex-direction: column;
     padding: 0 1em;
     gap: 1em;
+
+    &--dropdown {
+      margin-bottom: 0;
+    }
   }
 
   &__item {
@@ -148,6 +152,19 @@ li {
 
     > svg {
       margin-left: 1em;
+    }
+
+    &--dropdown {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+
+      > img {
+        margin-right: 1em;
+        width: 12.5%;
+        height: auto;
+      }
     }
   }
 
@@ -199,5 +216,24 @@ li {
     opacity: 0;
     transform: translateX(120%);
     transition: transform 10ms 350ms ease-in-out, opacity 350ms ease-in-out;
+  }
+}
+
+.dropdown {
+  &__menu {
+    padding: 1.5em 0 0.5em 0;
+    display: none;
+  }
+}
+
+// TODO: add transition
+
+.dropdown[data-state='expanded'] {
+  .dropdown__btn svg {
+    transform: rotateX(180);
+  }
+
+  .dropdown__menu {
+    display: block;
   }
 }

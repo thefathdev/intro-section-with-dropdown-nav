@@ -46,7 +46,7 @@
           /></a>
           <ul class="side-navbar__list" role="list">
             <li class="dropdown" data-state="collapsed">
-              <a href="#features" class="side-navbar__item"
+              <a href="#features" class="side-navbar__item dropdown__btn"
                 >Features<svg
                   width="10"
                   height="6"
@@ -60,10 +60,39 @@
                   />
                 </svg>
               </a>
-              <!-- TODO: dropdown -->
+              <!-- dropdown -->
+              <div class="dropdown__menu">
+                <ul
+                  class="side-navbar__list side-navbar__list--dropdown"
+                  role="list"
+                >
+                  <li class="side-navbar__item side-navbar__item--dropdown">
+                    <img src="./images/icon-todo.svg" alt="Todo List" /> Todo
+                    List
+                  </li>
+                  <li class="side-navbar__item side-navbar__item--dropdown">
+                    <img
+                      src="./images/icon-calendar.svg"
+                      alt="Calender"
+                    />Calender
+                  </li>
+                  <li class="side-navbar__item side-navbar__item--dropdown">
+                    <img
+                      src="./images/icon-reminders.svg"
+                      alt="Reminder"
+                    />Reminder
+                  </li>
+                  <li class="side-navbar__item side-navbar__item--dropdown">
+                    <img
+                      src="./images/icon-planning.svg"
+                      alt="Planning"
+                    />Planning
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="dropdown" data-state="collapsed">
-              <a href="#company" class="side-navbar__item"
+              <a href="#company" class="side-navbar__item dropdown__btn"
                 >Company<svg
                   width="10"
                   height="6"
@@ -77,6 +106,23 @@
                   />
                 </svg>
               </a>
+              <!-- dropdown -->
+              <div class="dropdown__menu">
+                <ul
+                  class="side-navbar__list side-navbar__list--dropdown"
+                  role="list"
+                >
+                  <li class="side-navbar__item side-navbar__item--dropdown">
+                    History
+                  </li>
+                  <li class="side-navbar__item side-navbar__item--dropdown">
+                    Our Team
+                  </li>
+                  <li class="side-navbar__item side-navbar__item--dropdown">
+                    Blog
+                  </li>
+                </ul>
+              </div>
             </li>
             <li>
               <a href="#" class="side-navbar__item">Careers</a>
