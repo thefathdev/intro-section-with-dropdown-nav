@@ -4,6 +4,8 @@
 
 @import './base';
 
+// TODO: add initial transition and animation
+
 // CSS Custom Properties
 :root {
   --clr-neutral-100: hsl(0, 0%, 98%);
@@ -304,7 +306,7 @@ li {
     }
 
     &__body {
-      max-width: 40ch;
+      max-width: 45ch;
       margin-bottom: 3em;
     }
 
