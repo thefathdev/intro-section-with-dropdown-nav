@@ -312,6 +312,7 @@ li {
     max-width: 90rem;
     margin-inline: auto;
     padding: 2em 2.5em;
+    justify-content: stretch;
   }
   .hero {
     display: grid;
@@ -356,5 +357,62 @@ li {
 .side-navbar,
 .overlay {
     display: none;
+  }
+  .main-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+    flex: 1;
+    font-size: 0.8em;
+  }
+  .main-navbar__list {
+    display: flex;
+    flex-direction: row;
+    padding-left: 4em;
+    gap: 2.5em;
+  }
+  .main-navbar__list--dropdown {
+    margin-bottom: 0;
+  }
+  .main-navbar__item {
+    text-decoration: none;
+    color: var(--clr-neutral-400);
+  }
+  .main-navbar__item:hover {
+    color: var(--clr-neutral-700);
+  }
+  .main-navbar__item > svg {
+    margin-left: 0.5em;
+  }
+  .main-navbar__item--dropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+  }
+  .main-navbar__item--dropdown > img {
+    margin-right: 1em;
+    width: 12.5%;
+    height: auto;
+  }
+  .main-navbar__cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: auto;
+    align-items: center;
+  }
+  .main-navbar__login {
+    margin-right: 2.5em;
+    text-decoration: none;
+    color: var(--clr-neutral-400);
+  }
+  .main-navbar__login:hover {
+    color: var(--clr-neutral-700);
+  }
+  .main-navbar__btn {
+    padding: 1em 1.5em;
+    text-align: center;
   }
 }/*# sourceMappingURL=style.css.map */

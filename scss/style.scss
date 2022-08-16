@@ -269,6 +269,7 @@ li {
     max-width: 90rem;
     margin-inline: auto;
     padding: 2em 2.5em;
+    justify-content: stretch;
   }
 
   .hero {
@@ -321,5 +322,77 @@ li {
   .side-navbar,
   .overlay {
     display: none;
+  }
+
+  // Desktop navigation
+  // TODO: fixed the dropdown
+
+  .main-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+    flex: 1;
+    font-size: 0.8em;
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      padding-left: 4em;
+      gap: 2.5em;
+
+      &--dropdown {
+        margin-bottom: 0;
+      }
+    }
+
+    &__item {
+      text-decoration: none;
+      color: var(--clr-neutral-400);
+
+      &:hover {
+        color: var(--clr-neutral-700);
+      }
+
+      > svg {
+        margin-left: 0.5em;
+      }
+
+      &--dropdown {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+
+        > img {
+          margin-right: 1em;
+          width: 12.5%;
+          height: auto;
+        }
+      }
+    }
+
+    &__cta {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-left: auto;
+      align-items: center;
+    }
+
+    &__login {
+      margin-right: 2.5em;
+      text-decoration: none;
+      color: var(--clr-neutral-400);
+
+      &:hover {
+        color: var(--clr-neutral-700);
+      }
+    }
+
+    &__btn {
+      padding: 1em 1.5em;
+      text-align: center;
+    }
   }
 }

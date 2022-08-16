@@ -147,6 +147,103 @@
       <div class="overlay" data-state="close"></div>
 
       <!-- TODO: Desktop layout -->
+      <!-- Mobile side navigation bar -->
+      <nav class="main-navbar" data-state="close">
+        
+        <ul class="main-navbar__list" role="list">
+          <li class="dropdown" data-state="collapsed">
+            <a href="#features" class="main-navbar__item dropdown__btn"
+              >Features<svg
+                width="10"
+                height="6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke="#686868"
+                  stroke-width="1.5"
+                  fill="none"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </a>
+
+            <!-- Dropdown -->
+            <div class="dropdown__menu">
+              <ul
+                class="main-navbar__list main-navbar__list--dropdown"
+                role="list"
+              >
+                <li class="main-navbar__item main-navbar__item--dropdown">
+                  <img src="./images/icon-todo.svg" alt="Todo List" /> Todo
+                  List
+                </li>
+                <li class="main-navbar__item main-navbar__item--dropdown">
+                  <img
+                    src="./images/icon-calendar.svg"
+                    alt="Calender"
+                  />Calender
+                </li>
+                <li class="main-navbar__item main-navbar__item--dropdown">
+                  <img
+                    src="./images/icon-reminders.svg"
+                    alt="Reminder"
+                  />Reminder
+                </li>
+                <li class="main-navbar__item main-navbar__item--dropdown">
+                  <img
+                    src="./images/icon-planning.svg"
+                    alt="Planning"
+                  />Planning
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown" data-state="collapsed">
+            <a href="#company" class="main-navbar__item dropdown__btn"
+              >Company<svg
+                width="10"
+                height="6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke="#686868"
+                  stroke-width="1.5"
+                  fill="none"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </a>
+            <!-- Dropdown -->
+            <div class="dropdown__menu">
+              <ul
+                class="main-navbar__list main-navbar__list--dropdown"
+                role="list"
+              >
+                <li class="main-navbar__item main-navbar__item--dropdown">
+                  History
+                </li>
+                <li class="main-navbar__item main-navbar__item--dropdown">
+                  Our Team
+                </li>
+                <li class="main-navbar__item main-navbar__item--dropdown">
+                  Blog
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="main-navbar__item">Careers</a>
+          </li>
+          <li>
+            <a href="#" class="main-navbar__item">About</a>
+          </li>
+        </ul>
+        <div class="main-navbar__cta">
+          <a href="#" class="main-navbar__login">Login</a>
+          <a href="#" class="main-navbar__btn btn btn--outline">Register</a>
+        </div>
+      </nav>
+    </div>
     </header>
 
     <!-- Hero section -->
