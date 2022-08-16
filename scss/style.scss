@@ -265,7 +265,12 @@ li {
 // Desktop Layout
 
 @media screen and (min-width: 36rem) {
-  // TODO: Tidy up the layout
+  .header {
+    max-width: 90rem;
+    margin-inline: auto;
+    padding: 2em 2.5em;
+  }
+
   .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -280,14 +285,23 @@ li {
       text-align: start;
       align-items: flex-start;
       padding-left: 2em;
+      padding-bottom: 0;
+      padding-top: 6em;
+      align-self: stretch;
     }
 
     &__heading {
       font-size: 4.35em;
+      margin-bottom: 0.6em;
     }
 
     &__body {
       max-width: 45ch;
+      margin-bottom: 3em;
+    }
+
+    &__client {
+      margin-top: auto;
     }
 
     &__img {

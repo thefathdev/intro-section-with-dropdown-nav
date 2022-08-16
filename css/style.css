@@ -308,6 +308,11 @@ li {
   }
 }
 @media screen and (min-width: 36rem) {
+  .header {
+    max-width: 90rem;
+    margin-inline: auto;
+    padding: 2em 2.5em;
+  }
   .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -322,12 +327,20 @@ li {
     text-align: start;
     align-items: flex-start;
     padding-left: 2em;
+    padding-bottom: 0;
+    padding-top: 6em;
+    align-self: stretch;
   }
   .hero__heading {
     font-size: 4.35em;
+    margin-bottom: 0.6em;
   }
   .hero__body {
     max-width: 45ch;
+    margin-bottom: 3em;
+  }
+  .hero__client {
+    margin-top: auto;
   }
   .hero__img {
     grid-column: 2;
