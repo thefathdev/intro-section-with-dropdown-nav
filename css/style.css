@@ -84,6 +84,8 @@ select {
   --fw-medium: 500;
   --fw-large: 700;
   --ff-sans: "Epilogue", sans-serif;
+  --anim-duration: 300ms;
+  --anim-stagger: 100ms;
 }
 @media screen and (min-width: 36rem) {
   :root {
@@ -117,6 +119,10 @@ li {
   text-align: center;
   align-items: center;
 }
+.hero__img {
+  -webkit-animation: shift-up var(--anim-duration) ease-in-out both;
+          animation: shift-up var(--anim-duration) ease-in-out both;
+}
 .hero__img--desktop {
   display: none;
 }
@@ -132,21 +138,29 @@ li {
   font-weight: var(--fw-large);
   font-size: 2.2em;
   line-height: 1;
+  -webkit-animation: shift-up var(--anim-duration) calc(var(--anim-duration) - var(--anim-stagger)) ease-in-out both;
+          animation: shift-up var(--anim-duration) calc(var(--anim-duration) - var(--anim-stagger)) ease-in-out both;
 }
 .hero__body {
   margin-bottom: 1.5em;
   color: var(--clr-neutral-400);
   line-height: 1.6;
+  -webkit-animation: shift-up var(--anim-duration) calc((var(--anim-duration) - var(--anim-stagger)) * 2) ease-in-out both;
+          animation: shift-up var(--anim-duration) calc((var(--anim-duration) - var(--anim-stagger)) * 2) ease-in-out both;
 }
 .hero__btn {
   margin-bottom: 3em;
   padding: 1.125em 1.625em;
+  -webkit-animation: shift-up var(--anim-duration) calc((var(--anim-duration) - var(--anim-stagger)) * 3) ease-in-out both;
+          animation: shift-up var(--anim-duration) calc((var(--anim-duration) - var(--anim-stagger)) * 3) ease-in-out both;
 }
 .hero__client {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5em;
   align-items: center;
+  -webkit-animation: shift-up var(--anim-duration) calc((var(--anim-duration) - var(--anim-stagger)) * 4) ease-in-out both;
+          animation: shift-up var(--anim-duration) calc((var(--anim-duration) - var(--anim-stagger)) * 4) ease-in-out both;
 }
 
 .btn {
@@ -313,6 +327,55 @@ li {
   display: none;
 }
 
+@-webkit-keyframes shift-up {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes shift-up {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  to {
+    transform: none;
+  }
+}
+@-webkit-keyframes shift-left {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes shift-left {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    transform: none;
+  }
+}
 @media screen and (min-width: 36rem) {
   .header {
     max-width: 90rem;
@@ -327,6 +390,7 @@ li {
     align-items: center;
     max-width: 74rem;
     margin-inline: auto;
+    --anim-stagger: 50ms;
   }
   .hero__copy {
     grid-column: 1;
@@ -352,6 +416,8 @@ li {
   .hero__img {
     grid-column: 2;
     padding-left: 5em;
+    -webkit-animation-name: shift-left;
+            animation-name: shift-left;
   }
   .hero__img--mobile {
     display: none;

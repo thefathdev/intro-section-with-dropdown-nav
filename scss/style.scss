@@ -4,18 +4,18 @@
 
 @import './base';
 
-// TODO: add initial transition and animation
-
 // CSS Custom Properties
 :root {
   --clr-neutral-100: hsl(0, 0%, 98%);
   --clr-neutral-400: hsl(0, 0%, 41%);
   --clr-neutral-400-25: hsla(0, 0%, 41%, 0.25);
   --clr-neutral-700: hsl(0, 0%, 8%);
-  --fs-400: 1rem; //18px when 1rem == 16px => mobile
+  --fs-400: 1rem; //16px when 1rem == 16px => mobile
   --fw-medium: 500;
   --fw-large: 700;
   --ff-sans: 'Epilogue', sans-serif;
+  --anim-duration: 300ms;
+  --anim-stagger: 100ms;
 
   @media screen and (min-width: 36rem) {
     --fs-400: 1.125rem; //18px when 1rem == 16px => desktop
@@ -55,6 +55,8 @@ li {
   align-items: center;
 
   &__img {
+    animation: shift-up var(--anim-duration) ease-in-out both;
+
     &--desktop {
       display: none;
     }
@@ -73,17 +75,26 @@ li {
     font-weight: var(--fw-large);
     font-size: 2.2em;
     line-height: 1;
+
+    animation: shift-up var(--anim-duration)
+      calc(var(--anim-duration) - var(--anim-stagger)) ease-in-out both;
   }
 
   &__body {
     margin-bottom: 1.5em;
     color: var(--clr-neutral-400);
     line-height: 1.6;
+
+    animation: shift-up var(--anim-duration)
+      calc((var(--anim-duration) - var(--anim-stagger)) * 2) ease-in-out both;
   }
 
   &__btn {
     margin-bottom: 3em;
     padding: 1.125em 1.625em;
+
+    animation: shift-up var(--anim-duration)
+      calc((var(--anim-duration) - var(--anim-stagger)) * 3) ease-in-out both;
   }
 
   &__client {
@@ -91,6 +102,9 @@ li {
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5em;
     align-items: center;
+
+    animation: shift-up var(--anim-duration)
+      calc((var(--anim-duration) - var(--anim-stagger)) * 4) ease-in-out both;
   }
 }
 
@@ -271,6 +285,36 @@ li {
   display: none;
 }
 
+@keyframes shift-up {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes shift-left {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  to {
+    transform: none;
+  }
+}
+
 // Desktop Layout
 
 @media screen and (min-width: 36rem) {
@@ -288,6 +332,8 @@ li {
     align-items: center;
     max-width: 74rem;
     margin-inline: auto;
+
+    --anim-stagger: 50ms;
 
     &__copy {
       grid-column: 1;
@@ -317,6 +363,8 @@ li {
     &__img {
       grid-column: 2;
       padding-left: 5em;
+
+      animation-name: shift-left;
     }
 
     &__img--mobile {
