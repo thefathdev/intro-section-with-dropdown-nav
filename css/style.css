@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"); /* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+/* Box sizing rules */
 *,
 *::before,
 *::after {
@@ -77,6 +78,7 @@ select {
 :root {
   --clr-neutral-100: hsl(0, 0%, 98%);
   --clr-neutral-400: hsl(0, 0%, 41%);
+  --clr-neutral-400-25: hsla(0, 0%, 41%, 0.25);
   --clr-neutral-700: hsl(0, 0%, 8%);
   --fs-400: 1rem;
   --fw-medium: 500;
@@ -337,7 +339,7 @@ li {
     margin-bottom: 0.6em;
   }
   .hero__body {
-    max-width: 45ch;
+    max-width: 40ch;
     margin-bottom: 3em;
   }
   .hero__client {
@@ -364,7 +366,7 @@ li {
     justify-content: stretch;
     align-items: center;
     flex: 1;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   .main-navbar__list {
     display: flex;
@@ -374,6 +376,15 @@ li {
   }
   .main-navbar__list--dropdown {
     margin-bottom: 0;
+    flex-direction: column;
+    padding: 1.5em;
+    gap: 0.75em;
+    background-color: var(--clr-neutral-100);
+    border-radius: 14px;
+    box-shadow: 0 4px 24px var(--clr-neutral-400-25);
+    align-items: stretch;
+    justify-content: space-between;
+    width: 125%;
   }
   .main-navbar__item {
     text-decoration: none;
@@ -393,7 +404,7 @@ li {
   }
   .main-navbar__item--dropdown > img {
     margin-right: 1em;
-    width: 12.5%;
+    width: 1em;
     height: auto;
   }
   .main-navbar__cta {
@@ -414,5 +425,14 @@ li {
   .main-navbar__btn {
     padding: 1em 1.5em;
     text-align: center;
+  }
+  .dropdown {
+    position: relative;
+  }
+  .dropdown__menu {
+    position: absolute;
+    left: 0;
+    top: 2em;
+    padding: 0;
   }
 }/*# sourceMappingURL=style.css.map */
